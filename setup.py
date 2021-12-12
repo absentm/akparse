@@ -12,7 +12,7 @@ except Exception as err:
 
 setuptools.setup(
     name="akparse",
-    version="0.0.1",
+    version="0.1.8",
     author="AbsentM",
     author_email="absentm@163.com",
     description=DESCRIPTION,
@@ -27,6 +27,8 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    packages=setuptools.find_packages(),
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
+    # packages=setuptools.find_packages(),
     python_requires=">=2.6",
 )
