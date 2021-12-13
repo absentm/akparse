@@ -55,3 +55,11 @@ AkEcho.ak_echo(flag_options)
 ```
 
 **Please see more detail usage in examples**
+
+# Install
+
+This package is also released to PyPi.org. View at https://pypi.org/project/akparse/
+
+```shell
+pip install akparse
+```
