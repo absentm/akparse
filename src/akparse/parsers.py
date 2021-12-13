@@ -28,6 +28,7 @@ class AkParser:
         self._short_options = ""
         self._long_options = []
         self._options_list = []
+        self._defined_options = []
 
     def _parse_single_options(self, input_str):
         """
@@ -250,6 +251,14 @@ class AkParser:
         key_list = [k for k, v in options]
         if len(key_list) != len(set(key_list)):
             AkEcho.ak_err(AkError.ERROR_DUPLICATE_ARGS_MSG)
+
+        # Check input keys is defined
+        for flag_name, flag_key_list in self._options_list:
+            self._defined_options += flag_key_list
+
+        for item in args_list:
+            if str(item).startswith("-") and str(item) not in self._defined_options:
+                AkEcho.ak_err(AkError.ERROR_WRONG_KEY_MSG + "%s" % str(item))
 
         # Match pattern
         for flag_name, flag_key_list in self._options_list:

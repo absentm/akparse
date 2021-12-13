@@ -1,0 +1,10 @@
+disk-file help:
+
+# create a disk file when be defined: --create,-p=[--user=,-a=]
+disk-file --create -p file_path
+disk-file --create -p file_path --user u1 -a 777
+
+# query a disk file  when be defined: --query[{-p=|--list}]
+disk-file --query
+disk-file --query -p file_path
+disk-file --query --list

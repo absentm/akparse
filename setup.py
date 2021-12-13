@@ -2,7 +2,7 @@ import os
 import setuptools
 
 here = os.path.abspath(os.path.dirname(__file__))
-DESCRIPTION = "A args parse package with -,--,,|,{,},[,],= and character patterns."
+DESCRIPTION = "A args parse package with '-', '--', ',' '|', '{', '}', '[', ']', '=' and character patterns."
 
 try:
     with open(os.path.join(here, "README.md"), "r") as fh:
@@ -23,7 +23,8 @@ setuptools.setup(
         "Bug Tracker": "https://github.com/absentm/akparse/issues",
     },
     classifiers=[
-        "Programming Language :: Python :: 2/3",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],

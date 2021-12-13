@@ -12,10 +12,10 @@ class AkError(Exception):
     ERROR_WRONG_KEY_MSG = "ERROR: Wrong option key, "
     ERROR_STATE_MSG = "ERROR: The state has not been restored"
     ERROR_DUPLICATE_ARGS_MSG = "ERROR: Duplicate arguments"
-    ERROR_NOT_MATCH_MSG = "ERROR: No matching command line patterns were found"
+    ERROR_NOT_MATCH_MSG = "ERROR: No matching CLI patterns were found"
     ERROR_REDUNDANT_MSG = "ERROR: Redundant arguments"
     ERROR_PARSE_MSG = "ERROR: Parse error, "
-    ERROR_INPUT_MSG = "ERROR: An illegal pattern string, support: -,--,,|,{,},[,],= and character"
+    ERROR_INPUT_MSG = "ERROR: Illegal pattern string, Only: '-', '--', ',', '|', '{', '}', '[', ']', '=' and character"
 
     def __init__(self, msg, opt=''):
         self.msg = msg
