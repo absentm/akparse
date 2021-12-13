@@ -2,7 +2,9 @@ import os
 import setuptools
 
 here = os.path.abspath(os.path.dirname(__file__))
-DESCRIPTION = "A args parse package with '-', '--', ',' '|', '{', '}', '[', ']', '=' and character patterns."
+DESCRIPTION = "A simple and easy-to-use CLI parse tool package. " \
+              "You can use '-', '--', ',', '|', '{', '}', '[', ']', '=' and character " \
+              "to define your CLI API."
 
 try:
     with open(os.path.join(here, "README.md"), "r") as fh:
